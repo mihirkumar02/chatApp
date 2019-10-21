@@ -89,9 +89,12 @@ app.get('/addUser',function(req,res){
     res.redirect('admin');
 });
 
-app.get('/deleteUser', function(req, res){
+app.get('/deleteUser', function(req,res){
     var user = req.query.usernamedel;
-    people.pop(user);
+    for( var i = 0; i < people.length; i++){
+        if(people[i] == user)
+            people.pop(user);
+    }
     res.redirect('admin');
 });
 
