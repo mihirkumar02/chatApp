@@ -67,11 +67,11 @@ io.on('connection',function(socket){
 });
 
 
-const from = 'Arpit';
+const from = 'Hrituja';
 
 app.get('/message',function(req,res){
     console.log("1");
-    const to = "919451672228";
+    const to = "917044168689";
     const text = 'EUREKA !!';
     console.log("3");
     nexmo.message.sendSms(from, to, text);
@@ -99,7 +99,7 @@ app.get('/deleteUser', function(req,res){
 });
 
 app.get('/logon',function(req,res){
-    console.log("coming here, can check!!");
+    console.log("Coming here, can check!!");
     if (people.indexOf(req.query.username) > -1) {
     res.redirect('chat.html?username='+req.query.username);
     } else {
