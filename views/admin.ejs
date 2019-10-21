@@ -2,10 +2,21 @@
     <head>
         <title>CHAT APP</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+          .btn a{
+            text-decoration: none;
+            color: white;
+          }
+        </style>
     </head>
     <body>
        <div class="container">
            <h1>ADMIN VIEW</h1>
+           <hr>
+           <div class="btn btn-success">
+             <a href="/index.html">GO BACK</a>
+           </div>
+           <hr>
            <form action="/addUser" method="get">
            <div class="form-group">
                <label for="username">ENTER USERNAME</label>
@@ -21,6 +32,7 @@
                </div>
                <button type="submit" class="btn btn-danger">DELETE</button>
                </form>
+               <hr>
             <h3><u>PEOPLE ADDED</u></h3>
            <table class="table table-striped">
     <thead>
