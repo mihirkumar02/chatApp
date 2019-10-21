@@ -89,6 +89,12 @@ app.get('/addUser',function(req,res){
     res.redirect('admin');
 });
 
+app.get('/deleteUser', function(req, res){
+    var user = req.query.usernamedel;
+    people.pop(user);
+    res.redirect('admin');
+});
+
 app.get('/logon',function(req,res){
     console.log("coming here, can check!!");
     if (people.indexOf(req.query.username) > -1) {
